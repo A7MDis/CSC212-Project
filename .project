@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>CSC212</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/dataset.csv</name>
+			<type>1</type>
+			<location>C:/Users/alshm/Downloads/data/data/dataset.csv</location>
+		</link>
+		<link>
+			<name>src/stop.txt</name>
+			<type>1</type>
+			<location>C:/Users/alshm/Downloads/data/data/stop.txt</location>
+		</link>
+	</linkedResources>
+</projectDescription>
