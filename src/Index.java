@@ -1,5 +1,7 @@
+
+
 public class Index {  
-      
+    
     class Document {  
             int docID;  
             LinkedList <Vocabulary> index;   
@@ -37,7 +39,7 @@ public class Index {
                return false;  
            }  
     }     
-    //===========================================================  
+
       
     Document [] indexes;  
       
@@ -78,4 +80,4 @@ public class Index {
             }  
         }  
     }  
-}  
+}

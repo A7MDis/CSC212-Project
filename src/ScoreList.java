@@ -1,3 +1,4 @@
+
 class ScoreList {  
     private class Node {  
         DocScore data;  

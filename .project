@@ -14,16 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/dataset.csv</name>
-			<type>1</type>
-			<location>C:/Users/alshm/Downloads/data/data/dataset.csv</location>
-		</link>
-		<link>
-			<name>src/stop.txt</name>
-			<type>1</type>
-			<location>C:/Users/alshm/Downloads/data/data/stop.txt</location>
-		</link>
-	</linkedResources>
 </projectDescription>

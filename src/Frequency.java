@@ -1,3 +1,4 @@
+
 public class Frequency {  
     Vocabulary word;  
     int Freq;  
@@ -40,4 +41,4 @@ public class Frequency {
   
       
       
-}  
+}

@@ -11,32 +11,26 @@ public class Inverted_Index_AVLRanked {
         AVLrank = new AVLTree<Integer, AVLTree<String, Rank>>();  
     }  
 
-    // إضافة كلمة جديدة إلى الفهرس
     public boolean addNew(int docID, String word) {  
         if (AVLrank.empty()) {  
-            // إذا كان الفهرس فارغًا، أنشئ فهرس جديد لهذا المستند
             AVLTree<String, Rank> miniRank = new AVLTree<String, Rank>();  
             miniRank.insert(word, new Rank(word, 1));  
             AVLrank.insert(docID, miniRank);  
             return true;  
         } else {  
-            // إذا كان هناك فهرس لهذا المستند، ابحث عن الكلمة داخله
             if (AVLrank.find(docID)) {  
                 AVLTree<String, Rank> miniRank = AVLrank.retrieve();  
                 if (miniRank.find(word)) {  
-                    // إذا كانت الكلمة موجودة في الفهرس، أضف رتبة جديدة
                     Rank rank = miniRank.retrieve();  
-                    rank.add_Rank();  // تأكد أن add_Rank() موجودة في كلاس Rank
+                    rank.add_Rank();  
                     miniRank.update(rank);  
                     AVLrank.update(miniRank);  
                     return false;  
                 }  
-                // إذا كانت الكلمة غير موجودة، قم بإضافتها مع رتبة جديدة
                 miniRank.insert(word, new Rank(word, 1));  
                 AVLrank.update(miniRank);  
                 return true;  
             }  
-            // إذا لم يكن هناك فهرس للمستند، قم بإنشاء فهرس جديد وإضافة الكلمة مع رتبتها
             AVLTree<String, Rank> miniRank = new AVLTree<String, Rank>();  
             miniRank.insert(word, new Rank(word, 1));  
             AVLrank.insert(docID, miniRank);  
@@ -44,7 +38,6 @@ public class Inverted_Index_AVLRanked {
         }  
     }  
 
-    // التحقق من وجود الكلمة في المستند
     public boolean found(int docID, String word) {  
         if (AVLrank.find(docID))  
             if (AVLrank.retrieve().find(word))  
@@ -52,7 +45,6 @@ public class Inverted_Index_AVLRanked {
         return false;  
     }  
 
-    // الحصول على رتبة الكلمة في المستند
     public int getrank(int docID, String word) {  
         int value = 0;  
         if (AVLrank.find(docID))  
@@ -61,12 +53,10 @@ public class Inverted_Index_AVLRanked {
         return value;  
     }  
 
-    // طباعة المستندات في الفهرس
     public void printDocument() {  
-        AVLrank.TraverseT();  
+        AVLrank.Traverse();  
     }  
 
-    // حساب التكرار لكل كلمة في النص
     public void TF(String str) {  
         str = str.toLowerCase().trim();  
         String[] words = str.split(" ");  
@@ -92,7 +82,6 @@ public class Inverted_Index_AVLRanked {
             System.out.println(freqs[x].docID + "\t\t" + freqs[x].f);  
     }  
 
-    // خوارزمية الفرز باستخدام خوارزمية الدمج (MergeSort)
     public static void mergesort(frequency[] A, int l, int r) {  
         if (l >= r)  
             return;  
@@ -102,7 +91,6 @@ public class Inverted_Index_AVLRanked {
         merge(A, l, m, r);  
     }  
 
-    // دمج المصفوفات بعد الفرز
     private static void merge(frequency[] A, int l, int m, int r) {  
         frequency[] B = new frequency[r - l + 1];  
         int i = l, j = m + 1, k = 0;  

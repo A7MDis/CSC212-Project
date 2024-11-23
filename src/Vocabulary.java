@@ -1,3 +1,4 @@
+
 public class Vocabulary {  
     public String word;  
   

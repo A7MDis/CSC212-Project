@@ -1,3 +1,4 @@
+
 public class Rank {  
     Vocabulary word;  
     int rank ;  

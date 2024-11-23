@@ -1,3 +1,4 @@
+
 public class Term {  
     Vocabulary word;  
     boolean [] docIDS ;  
